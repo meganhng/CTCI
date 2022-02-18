@@ -1,2 +1,2 @@
 # CTCI
-Solutions for CTCI questions
+Solutions for CTCI Interview Questions
