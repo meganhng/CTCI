@@ -1,13 +1,14 @@
 const palindromePermutation = (input) => {
   if (input.length === 1) return true;
 
+  const modifiedInput = input.toLowerCase();
   let listOfCharacters = {};
   let numOfChars = 0,
     oddAmountFound = false,
     currentChar;
 
-  for (let i = 0; i < input.length; i++) {
-    currentChar = input[i];
+  for (let i = 0; i < modifiedInput.length; i++) {
+    currentChar = modifiedInput[i];
     if (currentChar === " ") continue;
     if (listOfCharacters[currentChar]) {
       listOfCharacters[currentChar] += 1;
