@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 
+
 public class Solution{
-	    public static bool PalindromePermutation(string str){
+	public static bool PalindromePermutation(string str){
         if (str.Length<=1){
             return true;
         }
