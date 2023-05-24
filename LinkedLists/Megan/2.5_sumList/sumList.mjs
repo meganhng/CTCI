@@ -35,13 +35,13 @@ function sumListIterative(linkList1, linkList2) {
 }
 
 function sumListRecusrive(number1, number2) {
-  let sum = addNodes(number1.head, number2.head, 0, new LinkedNode());
+  let sum = addNodes(number1.head, number2.head, 0);
   return new LinkedList(sum);
 }
 
-function addNodes(number1, number2, carryOver, totalSum) {
+function addNodes(number1, number2, carryOver) {
   if (number1 === null && number2 === null && carryOver === 0) {
-    return totalSum;
+    return null;
   }
 
   if (number1 !== null || number2 !== null || carryOver) {
@@ -56,15 +56,16 @@ function addNodes(number1, number2, carryOver, totalSum) {
 
     const carry = Math.floor(sum / 10);
     //create a new node
-    totalSum = new LinkedNode(sum % 10);
+    const totalSum = new LinkedNode(sum % 10);
     totalSum.next = addNodes(
       number1?.next || null,
       number2?.next || null,
       carry,
       totalSum.next
     );
+
+    return totalSum;
   }
-  return totalSum;
 }
 
 const number1 = arrayToLinkedList([7, 1, 6]);
