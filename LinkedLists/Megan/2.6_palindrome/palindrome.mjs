@@ -1,5 +1,6 @@
 import { arrayToLinkedList } from "../utils/convertLinkedList.mjs";
 
+// Solution requires using two linked lists
 function palindrome(linkedList) {
   let reverseList = null;
 
