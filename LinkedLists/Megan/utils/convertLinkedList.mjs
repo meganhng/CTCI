@@ -1,6 +1,12 @@
 import { LinkedList, LinkedNode } from "../LinkedList.mjs";
 
 export function arrayToLinkedList(array) {
+  const head = arrayToLinkedNode(array);
+
+  return new LinkedList(head);
+}
+
+export function arrayToLinkedNodes(array) {
   let head;
   let curr;
 
@@ -14,7 +20,6 @@ export function arrayToLinkedList(array) {
     }
   }
 
-  head = new LinkedList(head);
   return head;
 }
 
